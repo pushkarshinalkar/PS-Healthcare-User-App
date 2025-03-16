@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.TestsFrag">
+
+
+    <TextView
+        android:id="@+id/text_tests_top"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/nunito_bold"
+        android:text="Explore our collection of 1000+ Lab tests"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchView"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_tests_top"
+        app:strokeColor="#C0C0C0"
+        app:strokeWidth="0.5dp"
+        android:transitionName="card_fade">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView_tests_tests"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:imeOptions="actionSearch"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/img_sidemenu"
+            app:layout_constraintTop_toTopOf="parent"
+            app:queryBackground="@null"
+            app:queryHint="Search lab tests"
+            android:transitionName="search_fade"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <HorizontalScrollView
+        android:id="@+id/chipscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:selectionRequired="true"
+            app:singleSelection="true">
+
+<!--            <com.google.android.material.chip.Chip-->
+<!--                android:id="@+id/chip_all"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:checkable="true"-->
+<!--                android:text="All"-->
+<!--                android:textSize="17dp"-->
+<!--                app:chipCornerRadius="15dp"-->
+<!--                app:chipIcon="@drawable/ic_profile" />-->
+
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_testslist"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/chipscrollview" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/anim_load_testsFrag"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_testslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/loading_animaton_flask" />
+
+    <ImageView
+        android:id="@+id/img_nothing_found"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_empty_box"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/rv_testslist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchView" />
+
+    <TextView
+        android:id="@+id/text_nothing_found"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="No Test Found"
+        android:fontFamily="@font/nunito_bold"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_nothing_found" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        app:strokeWidth="2dp"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="#ffffff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_delete"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/left_line"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="12dp"
+                android:background="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/text_totalprice"
+                app:layout_constraintStart_toEndOf="@+id/img_delete"
+                app:layout_constraintTop_toTopOf="@+id/text_selected" />
+
+            <TextView
+                android:id="@+id/text_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Tests Selected"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_totalprice"
+                app:layout_constraintStart_toEndOf="@+id/left_line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/text_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="Total Price"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/left_line"
+                app:layout_constraintTop_toBottomOf="@+id/text_selected" />
+
+
+            <View
+                android:id="@+id/right_line"
+                android:layout_width="2dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="12dp"
+                android:background="#000000"
+                app:layout_constraintBottom_toBottomOf="@+id/text_totalprice"
+                app:layout_constraintEnd_toStartOf="@+id/btn_checkout"
+                app:layout_constraintTop_toTopOf="@+id/text_selected" />
+
+            <Button
+                android:id="@+id/btn_checkout"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
+                    android:backgroundTint="#00AEC9"
+                android:elevation="30dp"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Checkout"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_no_oftests_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_price_oftests_cart"
+                app:layout_constraintEnd_toStartOf="@+id/right_line"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/text_price_oftests_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/right_line"
+                app:layout_constraintTop_toBottomOf="@+id/text_no_oftests_cart" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

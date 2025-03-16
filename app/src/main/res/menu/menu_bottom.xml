@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="Home"
+        android:id="@+id/homeFrag"
+        android:icon="@drawable/ic_selector_home" />
+    <item
+        android:title="Tests"
+        android:id="@+id/testsFrag"
+        android:icon="@drawable/ic_selector_beaker" />
+    <item
+        android:title="Blogs"
+        android:id="@+id/blogsFrag"
+        android:icon="@drawable/ic_selection_blog" />
+    <item
+        android:title="Report"
+        android:id="@+id/recordsFrag"
+        android:icon="@drawable/ic_selector_records" />
+
+    <item
+        android:title="Profie"
+        android:id="@+id/profileFrag"
+        android:icon="@drawable/ic_selector_profile" />
+
+</menu>

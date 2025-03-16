@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "728650486483",
+    "firebase_url": "https://ps-healthcare-default-rtdb.firebaseio.com",
+    "project_id": "ps-healthcare",
+    "storage_bucket": "ps-healthcare.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728650486483:android:4d698b0e5686fea6fcfa26",
+        "android_client_info": {
+          "package_name": "com.pshealthcare.customer.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728650486483-8gu4d78rbav15r1lbe9i0fe0u8en8d67.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pshealthcare.customer.app",
+            "certificate_hash": "15fc7c393228d83ba8d4869762dff9e3b3ab8bbe"
+          }
+        },
+        {
+          "client_id": "728650486483-io506bf0fhk6v0943aalo4cm83nj9rap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7g4aK_aLfhK2tqrsqn1CIORmQ3UF8PO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728650486483-io506bf0fhk6v0943aalo4cm83nj9rap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:728650486483:android:35c684c157dc7fbafcfa26",
+        "android_client_info": {
+          "package_name": "com.pshealthcare.executive.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "728650486483-io506bf0fhk6v0943aalo4cm83nj9rap.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7g4aK_aLfhK2tqrsqn1CIORmQ3UF8PO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "728650486483-io506bf0fhk6v0943aalo4cm83nj9rap.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

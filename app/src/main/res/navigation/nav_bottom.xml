@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_bottom"
+    app:startDestination="@id/homeFrag">
+
+    <fragment
+        android:id="@+id/homeFrag"
+        android:name="com.pshealthcare.customer.app.fragments.HomeFrag"
+        android:label="HomeFrag" >
+        <action
+            android:id="@+id/action_homeFrag_to_testsFrag"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_recordsFrag"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_profileFrag"
+            app:destination="@id/profileFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_blogsFrag"
+            app:destination="@id/blogsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_testsFrag2"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_blogsFrag2"
+            app:destination="@id/blogsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_recordsFrag2"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_homeFrag_to_profileFrag2"
+            app:destination="@id/profileFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFrag"
+        android:name="com.pshealthcare.customer.app.fragments.ProfileFrag"
+        android:label="ProfileFrag" >
+        <action
+            android:id="@+id/action_profileFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_profileFrag_to_homeFrag2"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_profileFrag_to_testsFrag"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_profileFrag_to_recordsFrag"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_profileFrag_to_blogsFrag"
+            app:destination="@id/blogsFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordsFrag"
+        android:name="com.pshealthcare.customer.app.fragments.RecordsFrag"
+        android:label="RecordsFrag" >
+        <action
+            android:id="@+id/action_recordsFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_testsFrag"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_profileFrag"
+            app:destination="@id/profileFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_homeFrag2"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_testsFrag2"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_blogsFrag"
+            app:destination="@id/blogsFrag" />
+        <action
+            android:id="@+id/action_recordsFrag_to_profileFrag2"
+            app:destination="@id/profileFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/testsFrag"
+        android:name="com.pshealthcare.customer.app.fragments.TestsFrag"
+        android:label="TestsFrag" >
+        <action
+            android:id="@+id/action_testsFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_recordsFrag"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_profileFrag"
+            app:destination="@id/profileFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_blogsFrag"
+            app:destination="@id/blogsFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_homeFrag2"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_blogsFrag2"
+            app:destination="@id/blogsFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_recordsFrag2"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_testsFrag_to_profileFrag2"
+            app:destination="@id/profileFrag" />
+    </fragment>
+    <fragment
+        android:id="@+id/blogsFrag"
+        android:name="com.pshealthcare.customer.app.fragments.BlogsFrag"
+        android:label="BlogsFrag"
+        tools:layout="@layout/fragment_blog" >
+        <action
+            android:id="@+id/action_blogsFrag_to_homeFrag"
+            app:destination="@id/homeFrag" />
+        <action
+            android:id="@+id/action_blogsFrag_to_testsFrag"
+            app:destination="@id/testsFrag" />
+        <action
+            android:id="@+id/action_blogsFrag_to_recordsFrag"
+            app:destination="@id/recordsFrag" />
+        <action
+            android:id="@+id/action_blogsFrag_to_profileFrag"
+            app:destination="@id/profileFrag" />
+    </fragment>
+</navigation>

@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookingInfoActivity">
+
+
+    <ImageView
+        android:id="@+id/img_booking_backbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_back" />
+
+
+    <TextView
+        android:id="@+id/booking_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center"
+        android:text="Verify Details"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_booking_backbtn"
+        app:layout_constraintStart_toEndOf="@+id/img_booking_backbtn"
+        app:layout_constraintTop_toTopOf="@+id/img_booking_backbtn" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_self"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="52dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toStartOf="@+id/card_member"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/booking_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_card_self"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Book for Self"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_card_self"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_self" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_member"
+        android:layout_width="130dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="52dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/card_self"
+        app:layout_constraintTop_toBottomOf="@+id/booking_title">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_card_member"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/nunito_bold"
+                android:gravity="center"
+                android:text="Book for Relative"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView61"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:layout_constraintBottom_toTopOf="@+id/text_card_member"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_family" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <View
+        android:id="@+id/hline_top"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="#B3B3B3"
+        app:layout_constraintBottom_toTopOf="@+id/text_summary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/text_summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center|start"
+        android:text="You will get a call from our  Executive after booking for order Confirmation"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/hline_top" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/spinnerTextlayoutSer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/card_member"
+        app:layout_constraintStart_toStartOf="@+id/card_self"
+        app:layout_constraintTop_toBottomOf="@+id/card_self">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompletespinnerTextSer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="none"
+            android:text="Select Member >"
+            android:textStyle="bold" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/line_verifyname"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/text_verifyname"
+        app:layout_constraintEnd_toStartOf="@+id/text_verifyname"
+        app:layout_constraintTop_toTopOf="@+id/text_verifyname" />
+
+    <TextView
+        android:id="@+id/text_verifyname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center|start"
+        android:text="Name"
+        android:textColor="#919191"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card_member" />
+
+
+    <View
+        android:id="@+id/line_verifyaddress"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/text_verifyaddress"
+        app:layout_constraintEnd_toStartOf="@+id/text_verifyaddress"
+        app:layout_constraintTop_toTopOf="@+id/text_verifyaddress" />
+
+    <TextView
+        android:id="@+id/text_verifyaddress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center|start"
+        android:text="Address"
+        android:textColor="#919191"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_verifyname" />
+
+
+
+    <View
+        android:id="@+id/line_verifymobile"
+        android:layout_width="4dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:background="#AAAAAA"
+        app:layout_constraintBottom_toBottomOf="@+id/text_verifymobile"
+        app:layout_constraintEnd_toStartOf="@+id/text_verifymobile"
+        app:layout_constraintTop_toTopOf="@+id/text_verifymobile" />
+
+    <TextView
+        android:id="@+id/text_verifymobile"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/nunito_bold"
+        android:gravity="center|start"
+        android:text="Mobile"
+        android:textColor="#919191"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_verifyaddress" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:backgroundTint="#ffffff"
+        app:cardCornerRadius="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeWidth="2dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="To be Paid"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/text_totalprice"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <TextView
+                android:id="@+id/text_totalprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_selected" />
+
+
+            <Button
+                android:id="@+id/btn_booknow"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:backgroundTint="#00AEC9"
+                android:drawableTint="#FFFFFF"
+                android:elevation="30dp"
+                android:fontFamily="@font/nunito_bold"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Book Now"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_opencalender"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@+id/text_selected"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btn_opencalender"
+                android:layout_width="55dp"
+                android:layout_height="41dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="#00AEC9"
+                app:cardCornerRadius="55dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="@+id/btn_booknow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/btn_booknow"
+                app:layout_constraintTop_toTopOf="@+id/btn_booknow">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="28dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_calender"
+                    app:tint="#FFFFFF" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@
         <item name="android:statusBarColor">?android:colorBackground</item>
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement">true</item>
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
